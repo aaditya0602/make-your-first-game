@@ -124,7 +124,12 @@ function App() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <h1 className="app-title">Game Dev Teaching Tool</h1>
+        <div className="app-title-group">
+          <h1 className="app-title">Make Your First Game</h1>
+          <p className="app-tagline">
+            A 20-minute, zero-install introduction to making games in your browser.
+          </p>
+        </div>
         <nav className="step-nav">
           <button type="button" onClick={() => setStepIndex((i) => i - 1)} disabled={stepIndex === 0}>
             ← Prev
@@ -176,6 +181,11 @@ function App() {
           <PreviewFrame code={code} runToken={runToken} onError={setPreviewError} />
         </section>
       </main>
+      <footer className="app-footer">
+        <a href="https://github.com/aaditya0602/make-your-first-game" target="_blank" rel="noopener noreferrer">
+          View source on GitHub
+        </a>
+      </footer>
     </div>
   );
 }
