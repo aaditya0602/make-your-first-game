@@ -111,6 +111,16 @@ function App() {
     setEditorKey((k) => k + 1);
   }
 
+  // Loads this step's finished code into the editor and runs it, so a
+  // learner who's stuck can see working code instead of quitting.
+  function handleShowAnswer() {
+    setCode(step.solutionCode);
+    saveCodeForStep(step.id, step.solutionCode);
+    setPreviewError(null);
+    setRunToken((t) => t + 1);
+    setEditorKey((k) => k + 1);
+  }
+
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -136,6 +146,9 @@ function App() {
           </button>
           <button type="button" className="secondary-button" onClick={handleReset}>
             Reset to working code
+          </button>
+          <button type="button" className="secondary-button" onClick={handleShowAnswer}>
+            Show me the answer
           </button>
         </div>
         {previewError && (
