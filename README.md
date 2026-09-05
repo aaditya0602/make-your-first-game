@@ -1,5 +1,7 @@
 # Make Your First Game
 
+**[Open the tutorial](https://aaditya0602.github.io/make-your-first-game/)** — no install, no account, works on any browser.
+
 A zero-install, browser-based tutorial that takes someone who has never
 programmed from a blank screen to a small, playable game in about 20 minutes.
 Built for a library / student-consultant teaching context: no accounts, no
